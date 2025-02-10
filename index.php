@@ -14,12 +14,16 @@
                 <input type="email" name="correo" placeholder="Correo">
             </div>
             <div class="form__input">
-                <input type="text" name="contrasenia" placeholder="Contraseña">
+                <input type="password" name="contrasenia" placeholder="Contraseña">
             </div>
             <input class="boton" type="submit" name="ingresar" value="Ingresar">
             <a href="registrar.php">Registrarse</a>
             <a href="restaurar.php">Restaurar</a>
         
     </form>
+
+    <?php
+        include_once("logica/registro.php");
+    ?>
 </body>
 </html>
