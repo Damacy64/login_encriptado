@@ -42,7 +42,7 @@
                         </td>
                       </tr>";
             }
-        } else {
+        } else { 
             echo "<tr><td colspan='5'>No hay datos disponibles</td></tr>";
         }
         ?>
