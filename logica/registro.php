@@ -13,17 +13,20 @@ if(isset($_POST['registrar'])){
         $correo = trim($_POST['correo']);
         $contrasenia = trim($_POST['contrasenia']);
         $fecha = date("d/m/y");
+        $contraE = password_hash($contrasenia,PASSWORD_DEFAULT);
         $consulta = "INSERT INTO datos(nombre,telefono,correo,contrasenia,fecha)
-        VALUES('$name','$telefono','$correo','$contrasenia','$fecha')";
-        $resultado = mysqli_connect($conex, $consulta);
+        VALUES('$name','$telefono','$correo','$contraE','$fecha')";
+        $resultado = mysqli_query($conex, $consulta);
         if($resultado){
-            ?>
-            <h3 class="success">Tu registro se a completado</h3>
-            <?php
+            echo "<script>
+                    alert('Registro completado.');
+                    </script>";
+            header("Location: index.php");
         } else{
-            ?>
-            <h3 class="error">Ocurrio un error</h3>
-            <?php
+            echo "<script>
+                    alert('Algo salio mal.');
+                    window.location.href = '#';
+                    </script>";
         }
     } else {
         ?>
