@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrarse</title>
-    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" type="text/css" href="estilos.css">
 </head>
 <body>
-    <form action="post">
+    <form method="post">
             
             <h2>Registrarse</h2>
             <div class="form__input">
@@ -24,5 +24,8 @@
             </div>
             <input class="boton" type="submit" name="registrar" value="Registrar">    
     </form>
+    <?php
+        include_once("logica/registro.php");
+    ?>
 </body>
 </html>

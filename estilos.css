@@ -7,6 +7,21 @@ body{
     min-height: 100vh;
 }
 
+a{
+    all: unset;
+    display: inline-block;
+    color: #204d6e;
+    cursor: pointer;
+    text-decoration: underline;
+    margin-top: 10px;
+}
+
+a:visited{
+    all: unset;
+    color: #204d6e;
+    cursor: pointer;
+}
+
 form{
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     padding: 50px 35px;
@@ -21,12 +36,6 @@ form h2{
     font-size: 35px;
     color: #0d0d0d;
     margin: 0;
-}
-
-form p{
-    font-size: 16px;
-    color: #5e5e5e;
-    margin-bottom: 35px;
 }
 
 .form__input{
